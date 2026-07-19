@@ -1,6 +1,15 @@
-import data from './saved_content.json';
+import fs from 'fs';
+import path from 'path';
 
 export function getSavedContent() {
+  const dataPath = path.join(process.cwd(), 'src', 'lib', 'saved_content.json');
+  
+  if (!fs.existsSync(dataPath)) {
+    return [];
+  }
+
+  const rawData = fs.readFileSync(dataPath, 'utf8');
+  const data = JSON.parse(rawData);
   
   let articles = [];
 
