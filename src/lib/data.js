@@ -1,16 +1,6 @@
-import fs from 'fs';
-import path from 'path';
+import data from './saved_content.json';
 
 export function getSavedContent() {
-  // Path to the backend's data folder
-  const dataPath = path.join(process.cwd(), '..', 'data', 'saved_content.json');
-  
-  if (!fs.existsSync(dataPath)) {
-    return [];
-  }
-
-  const rawData = fs.readFileSync(dataPath, 'utf8');
-  const data = JSON.parse(rawData);
   
   let articles = [];
 
