@@ -21,6 +21,11 @@ export function getSavedContent() {
     for (const blogType of Object.keys(contentTypes)) {
       // Check if it's a blog entry
       if (blogType.startsWith('blog_')) {
+        // STRICT PUBLISH FILTER: Only show this blog if it's in the published_blogs array
+        if (!videoData.published_blogs || !videoData.published_blogs.includes(blogType)) {
+          continue;
+        }
+
         const blog = contentTypes[blogType];
           
         const imageUrl = blog.image_url ? `/${blog.image_url}` : '';
