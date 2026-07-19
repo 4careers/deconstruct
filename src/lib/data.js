@@ -23,7 +23,7 @@ export function getSavedContent() {
       if (blogType.startsWith('blog_')) {
         const blog = contentTypes[blogType];
           
-        const imageUrl = blog.image_url ? `http://localhost:8000/${blog.image_url}` : '';
+        const imageUrl = blog.image_url ? `/${blog.image_url}` : '';
 
         articles.push({
           id: `${videoId}-${blogType}`, // Combine video ID and blog type for unique URL
