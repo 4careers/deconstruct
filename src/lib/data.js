@@ -22,7 +22,7 @@ export function getSavedContent() {
       // Check if it's a blog entry
       if (blogType.startsWith('blog_')) {
         // STRICT PUBLISH FILTER: Only show this blog if it's in the published_blogs array
-        if (!videoData.published_blogs || !videoData.published_blogs.includes(blogType)) {
+        if (!contentTypes.published_blogs || !contentTypes.published_blogs.includes(blogType)) {
           continue;
         }
 
