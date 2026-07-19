@@ -28,7 +28,9 @@ export default function Navbar() {
           <Link href="/blog" style={{ color: 'var(--text-secondary)', fontWeight: 500 }} onMouseOver={e => e.target.style.color = 'white'} onMouseOut={e => e.target.style.color = 'var(--text-secondary)'}>Articles</Link>
           <Link href="/store" style={{ color: 'var(--text-secondary)', fontWeight: 500 }} onMouseOver={e => e.target.style.color = 'white'} onMouseOut={e => e.target.style.color = 'var(--text-secondary)'}>Store</Link>
           <a href="https://youtube.com/@DeconstructOfficial" target="_blank" rel="noreferrer" style={{ color: 'var(--text-secondary)', fontWeight: 500 }} onMouseOver={e => e.target.style.color = 'white'} onMouseOut={e => e.target.style.color = 'var(--text-secondary)'}>YouTube</a>
-          <button className="btn-primary" style={{ padding: '0.5rem 1rem', fontSize: '0.9rem' }}>Subscribe</button>
+          <a href="https://youtube.com/@DeconstructOfficial?sub_confirmation=1" target="_blank" rel="noreferrer">
+            <button className="btn-primary" style={{ padding: '0.5rem 1rem', fontSize: '0.9rem', cursor: 'pointer' }}>Subscribe</button>
+          </a>
         </div>
       </div>
     </nav>
