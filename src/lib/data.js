@@ -8,28 +8,27 @@ export function getSavedContent() {
   for (const videoId of Object.keys(data)) {
     const contentTypes = data[videoId];
     
-    // Check if this video has published blogs
-    if (contentTypes.published_blogs && Array.isArray(contentTypes.published_blogs)) {
-      for (const blogType of contentTypes.published_blogs) {
-        if (contentTypes[blogType]) {
-          const blog = contentTypes[blogType];
+    // Iterate over all keys in the video object
+    for (const blogType of Object.keys(contentTypes)) {
+      // Check if it's a blog entry
+      if (blogType.startsWith('blog_')) {
+        const blog = contentTypes[blogType];
           
-          const imageUrl = blog.image_url ? `http://localhost:8000/${blog.image_url}` : '';
+        const imageUrl = blog.image_url ? `http://localhost:8000/${blog.image_url}` : '';
 
-          articles.push({
-            id: `${videoId}-${blogType}`, // Combine video ID and blog type for unique URL
-            videoId: videoId,
-            videoUrl: `https://youtube.com/watch?v=${videoId}`,
-            title: blog.title || "Untitled Article",
-            content: blog.content,
-            // Generate a quick excerpt by stripping markdown and taking first 150 chars
-            excerpt: blog.content.replace(/#|\*|_/g, '').substring(0, 150) + "...",
-            imageUrl: imageUrl,
-            date: new Date().toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }),
-            // Extract category name dynamically (e.g. blog_deep_dive -> Deep Dive)
-            category: blogType.replace('blog_', '').split('_').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')
-          });
-        }
+        articles.push({
+          id: `${videoId}-${blogType}`, // Combine video ID and blog type for unique URL
+          videoId: videoId,
+          videoUrl: `https://youtube.com/watch?v=${videoId}`,
+          title: blog.title || "Untitled Article",
+          content: blog.content,
+          // Generate a quick excerpt by stripping markdown and taking first 150 chars
+          excerpt: blog.content.replace(/#|\*|_/g, '').substring(0, 150) + "...",
+          imageUrl: imageUrl,
+          date: new Date().toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }),
+          // Extract category name dynamically (e.g. blog_deep_dive -> Deep Dive)
+          category: blogType.replace('blog_', '').split('_').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')
+        });
       }
     }
   }
