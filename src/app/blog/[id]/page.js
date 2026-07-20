@@ -27,7 +27,15 @@ export default async function ArticlePage({ params }) {
   return (
     <>
       <Navbar />
-      <main className="content-container" style={{ paddingTop: '4rem', paddingBottom: '6rem' }}>
+      
+      <div className="blog-layout-grid" style={{ paddingTop: '4rem', paddingBottom: '6rem' }}>
+        
+        {/* Left Sidebar Ad */}
+        <aside className="ad-sidebar">
+          <AdUnit format="vertical" id="blog-left-sidebar-ad" />
+        </aside>
+
+        <main style={{ padding: 0 }}>
         <Link href="/blog" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--text-secondary)', marginBottom: '2rem', width: 'fit-content' }}>
           <ArrowLeft size={16} /> Back to Articles
         </Link>
@@ -84,7 +92,14 @@ export default async function ArticlePage({ params }) {
             ></iframe>
           </div>
         </div>
-      </main>
+        </main>
+
+        {/* Right Sidebar Ad */}
+        <aside className="ad-sidebar">
+          <AdUnit format="vertical" id="blog-right-sidebar-ad" />
+        </aside>
+        
+      </div>
       
       <style dangerouslySetInnerHTML={{__html: `
         .markdown-body h2 { font-size: 2rem; margin-top: 3rem; margin-bottom: 1rem; color: var(--text-primary); }
