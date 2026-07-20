@@ -9,14 +9,15 @@ export default function AdUnit({ format = 'horizontal', id = 'ad-slot-1' }) {
       margin: '2rem 0',
     },
     vertical: {
-      width: '300px',
+      width: '100%',
       minHeight: '600px',
-      margin: '2rem auto',
+      margin: '0 0 2rem 0',
     },
     square: {
-      width: '300px',
+      width: '100%',
+      aspectRatio: '1 / 1',
       minHeight: '250px',
-      margin: '2rem auto',
+      margin: '0 0 2rem 0',
     }
   };
 

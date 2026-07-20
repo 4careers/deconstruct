@@ -32,7 +32,8 @@ export default async function ArticlePage({ params }) {
         
         {/* Left Sidebar Ad */}
         <aside className="ad-sidebar">
-          <AdUnit format="vertical" id="blog-left-sidebar-ad" />
+          <AdUnit format="square" id="blog-left-sidebar-ad-1" />
+          <AdUnit format="vertical" id="blog-left-sidebar-ad-2" />
         </aside>
 
         <main style={{ padding: 0 }}>
@@ -96,7 +97,8 @@ export default async function ArticlePage({ params }) {
 
         {/* Right Sidebar Ad */}
         <aside className="ad-sidebar">
-          <AdUnit format="vertical" id="blog-right-sidebar-ad" />
+          <AdUnit format="square" id="blog-right-sidebar-ad-1" />
+          <AdUnit format="vertical" id="blog-right-sidebar-ad-2" />
         </aside>
         
       </div>
