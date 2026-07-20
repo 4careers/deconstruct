@@ -17,11 +17,11 @@ export default function Home() {
       
       <main>
         {/* Hero Section */}
-        <section className="container" style={{ paddingTop: '6rem', paddingBottom: '6rem', textAlign: 'center' }}>
-          <h1 style={{ fontSize: '4rem', letterSpacing: '-1px', marginBottom: '1.5rem' }}>
+        <section className="container" style={{ paddingTop: '3rem', paddingBottom: '2rem', textAlign: 'center' }}>
+          <h1 style={{ fontSize: '3.5rem', letterSpacing: '-1px', marginBottom: '1rem' }}>
             Think <span className="text-gradient">Differently.</span>
           </h1>
-          <p style={{ color: 'var(--text-secondary)', fontSize: '1.2rem', maxWidth: '600px', margin: '0 auto 2.5rem' }}>
+          <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem', maxWidth: '600px', margin: '0 auto 1.5rem' }}>
             Deconstruct is a digital space dedicated to philosophy, secularism, and critical thinking in an age of noise.
           </p>
           <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center' }}>
@@ -34,7 +34,7 @@ export default function Home() {
         </section>
 
         {/* Homepage Ad Unit */}
-        <section className="container" style={{ paddingBottom: '4rem' }}>
+        <section className="container" style={{ paddingBottom: '3rem' }}>
           <AdUnit format="horizontal" id="homepage-mid-ad" />
         </section>
         
