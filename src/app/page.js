@@ -18,7 +18,7 @@ export default function Home() {
       <main>
         {/* Hero Section */}
         <section className="container" style={{ paddingTop: '3rem', paddingBottom: '2rem', textAlign: 'center' }}>
-          <Link href="/blog" style={{ display: 'inline-block', transition: 'transform 0.2s ease' }} onMouseOver={e => e.currentTarget.style.transform = 'scale(1.02)'} onMouseOut={e => e.currentTarget.style.transform = 'scale(1)'}>
+          <Link href="/blog" className="hero-link" style={{ display: 'inline-block' }}>
             <h1 style={{ fontSize: '3.5rem', letterSpacing: '-1px', margin: '0 0 1rem 0' }}>
               Think <span className="text-gradient">Differently.</span>
             </h1>

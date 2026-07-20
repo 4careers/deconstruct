@@ -145,11 +145,19 @@ a {
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
-  max-width: var(--max-width);
+  max-width: 800px;
   margin: 0 auto;
-  padding: 0 1.5rem;
 }
 
+.hero-link {
+  transition: transform 0.2s ease;
+}
+
+.hero-link:hover {
+  transform: scale(1.02);
+}
+
+/* Ad sidebars default hidden */
 .ad-sidebar {
   display: none;
 }
