@@ -3,7 +3,7 @@ import { getArticleById, getSavedContent } from '../../../lib/data';
 import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
-
+import AdUnit from '../../../components/AdUnit';
 
 
 export const dynamic = 'force-dynamic';
@@ -47,6 +47,9 @@ export default async function ArticlePage({ params }) {
           )}
         </header>
 
+        {/* Top Ad Unit */}
+        <AdUnit format="horizontal" id="blog-top-ad" />
+
         {/* Affiliate / Ad Injector */}
         <div className="glass-panel" style={{ padding: '1.5rem', marginBottom: '3rem', borderLeft: '4px solid var(--accent-primary)' }}>
           <p style={{ margin: 0, fontSize: '0.9rem', color: 'var(--text-secondary)' }}>
@@ -66,6 +69,9 @@ export default async function ArticlePage({ params }) {
 
         <hr style={{ border: 'none', borderTop: '1px solid var(--glass-border)', margin: '4rem 0 2rem' }} />
         
+        {/* Bottom Ad Unit */}
+        <AdUnit format="horizontal" id="blog-bottom-ad" />
+
         <div style={{ textAlign: 'center' }}>
           <h3 style={{ marginBottom: '1.5rem', fontSize: '1.5rem' }}>Watch the Full Video</h3>
           <div style={{ position: 'relative', paddingBottom: '56.25%', height: 0, overflow: 'hidden', borderRadius: 'var(--radius-lg)', boxShadow: 'var(--glass-shadow)' }}>
