@@ -1,6 +1,13 @@
 import fs from 'fs';
 import path from 'path';
 
+function slugify(text) {
+  return text
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/(^-|-$)+/g, '');
+}
+
 export function getSavedContent() {
   const dataPath = path.join(process.cwd(), 'src', 'lib', 'saved_content.json');
   
@@ -29,12 +36,15 @@ export function getSavedContent() {
         const blog = contentTypes[blogType];
           
         const imageUrl = blog.image_url ? `/${blog.image_url}` : '';
+        const title = blog.title || "Untitled Article";
+        const cleanBlogType = blogType.replace('blog_', '');
+        const slug = slugify(title);
 
         articles.push({
-          id: `${videoId}-${blogType}`, // Combine video ID and blog type for unique URL
+          id: `${slug}-${videoId}-${cleanBlogType}`, // SEO-optimized URL
           videoId: videoId,
           videoUrl: `https://youtube.com/watch?v=${videoId}`,
-          title: blog.title || "Untitled Article",
+          title: title,
           content: blog.content,
           // Generate a quick excerpt by stripping markdown and taking first 150 chars
           excerpt: blog.content.replace(/#|\*|_/g, '').substring(0, 150) + "...",
