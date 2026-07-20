@@ -1,5 +1,6 @@
 import Navbar from '../components/Navbar';
 import ArticleCard from '../components/ArticleCard';
+import AdUnit from '../components/AdUnit';
 import { ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 import { getSavedContent } from '../lib/data';
@@ -30,6 +31,11 @@ export default function Home() {
               </button>
             </Link>
           </div>
+        </section>
+
+        {/* Homepage Ad Unit */}
+        <section className="container" style={{ paddingBottom: '4rem' }}>
+          <AdUnit format="horizontal" id="homepage-mid-ad" />
         </section>
         
         {/* Latest Articles */}
