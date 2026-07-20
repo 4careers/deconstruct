@@ -37,11 +37,10 @@ export function getSavedContent() {
           
         const imageUrl = blog.image_url ? `/${blog.image_url}` : '';
         const title = blog.title || "Untitled Article";
-        const cleanBlogType = blogType.replace('blog_', '');
         const slug = slugify(title);
 
         articles.push({
-          id: `${slug}-${videoId}-${cleanBlogType}`, // SEO-optimized URL
+          id: slug, // Ultra-clean SEO URL (Title only)
           videoId: videoId,
           videoUrl: `https://youtube.com/watch?v=${videoId}`,
           title: title,
