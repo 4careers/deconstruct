@@ -18,19 +18,14 @@ export default function Home() {
       <main>
         {/* Hero Section */}
         <section className="container" style={{ paddingTop: '3rem', paddingBottom: '2rem', textAlign: 'center' }}>
-          <h1 style={{ fontSize: '3.5rem', letterSpacing: '-1px', marginBottom: '1rem' }}>
-            Think <span className="text-gradient">Differently.</span>
-          </h1>
-          <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem', maxWidth: '600px', margin: '0 auto 1.5rem' }}>
-            Deconstruct is a digital space dedicated to philosophy, secularism, and critical thinking in an age of noise.
+          <Link href="/blog" style={{ display: 'inline-block', transition: 'transform 0.2s ease' }} onMouseOver={e => e.currentTarget.style.transform = 'scale(1.02)'} onMouseOut={e => e.currentTarget.style.transform = 'scale(1)'}>
+            <h1 style={{ fontSize: '3.5rem', letterSpacing: '-1px', margin: '0 0 1rem 0' }}>
+              Think <span className="text-gradient">Differently.</span>
+            </h1>
+          </Link>
+          <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem', maxWidth: '600px', margin: '0 auto' }}>
+            Philosophy, secularism, and critical thinking in an age of noise.
           </p>
-          <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center' }}>
-            <Link href="/blog">
-              <button className="btn-primary" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                Read the Blog <ArrowRight size={18} />
-              </button>
-            </Link>
-          </div>
         </section>
 
         {/* Homepage Ad Unit */}
