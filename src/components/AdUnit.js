@@ -18,6 +18,11 @@ export default function AdUnit({ format = 'horizontal', id = 'ad-slot-1' }) {
       aspectRatio: '1 / 1',
       minHeight: '250px',
       margin: '0 0 2rem 0',
+    },
+    'small-banner': {
+      width: '100%',
+      minHeight: '60px',
+      margin: '1.5rem 0',
     }
   };
 

@@ -57,7 +57,7 @@ export default async function ArticlePage({ params }) {
         </header>
 
         {/* Top Ad Unit */}
-        <AdUnit format="horizontal" id="blog-top-ad" />
+        <AdUnit format="small-banner" id="blog-top-ad" />
 
         {/* Affiliate / Ad Injector */}
         <div className="glass-panel" style={{ padding: '1.5rem', marginBottom: '3rem', borderLeft: '4px solid var(--accent-primary)' }}>
@@ -79,7 +79,7 @@ export default async function ArticlePage({ params }) {
         <hr style={{ border: 'none', borderTop: '1px solid var(--glass-border)', margin: '4rem 0 2rem' }} />
         
         {/* Bottom Ad Unit */}
-        <AdUnit format="horizontal" id="blog-bottom-ad" />
+        <AdUnit format="small-banner" id="blog-bottom-ad" />
 
         <div style={{ textAlign: 'center' }}>
           <h3 style={{ marginBottom: '1.5rem', fontSize: '1.5rem' }}>Watch the Full Video</h3>
