@@ -2,7 +2,7 @@ import { getSavedContent } from '../lib/data';
 
 export default function sitemap() {
   const articles = getSavedContent();
-  const baseUrl = 'https://thedeconstruct.netlify.app';
+  const baseUrl = 'https://thedeconstruct.vercel.app';
 
   // Core static pages
   const routes = [

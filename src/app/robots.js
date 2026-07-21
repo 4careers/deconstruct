@@ -4,6 +4,6 @@ export default function robots() {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://thedeconstruct.netlify.app/sitemap.xml',
+    sitemap: 'https://thedeconstruct.vercel.app/sitemap.xml',
   }
 }
