@@ -5,7 +5,7 @@ export const metadata = {
   title: "Deconstruct | A Modern Philosophy Blog",
   description: "Atheism, Critical Thinking, Secularism, Humanism, Minimalism, Materialism, and Philosophy.",
   verification: {
-    google: "ju_8BPFau20VshEp8dv6tXIq6Y6f-VDlUe0Gf_uXkPE",
+    google: "s5VZZzQILLJ13Cfkbycr4pW4_MnqFBTZQwI3k8G_sc8",
   },
 };
 
